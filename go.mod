@@ -1,4 +1,4 @@
-module github.com/emmanuelgautier/go-cli-template
+module github.com/emmanuelgautier/httpmock-netlogger
 
 go 1.20
 

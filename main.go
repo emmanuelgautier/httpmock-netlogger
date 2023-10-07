@@ -1,6 +1,6 @@
 package main
 
-import "github.com/emmanuelgautier/go-cli-template/cmd"
+import "github.com/emmanuelgautier/httpmock-netlogger/cmd"
 
 func main() {
 	cmd.Execute()

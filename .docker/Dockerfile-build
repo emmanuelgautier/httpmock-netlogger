@@ -1,6 +1,6 @@
 FROM golang:1.21-bullseye AS builder
 
-WORKDIR /go/src/github.com/emmanuelgautier/go-cli-template
+WORKDIR /go/src/github.com/emmanuelgautier/httpmock-netlogger
 
 COPY go.mod go.mod
 COPY go.sum go.sum
@@ -12,11 +12,11 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /usr/bin/go-cli-template .
+RUN go build -o /usr/bin/httpmock-netlogger .
 
 FROM gcr.io/distroless/static-debian11:nonroot AS runner
 
-COPY --from=builder --chown=nonroot:nonroot /usr/bin/go-cli-template /usr/bin/go-cli-template
+COPY --from=builder --chown=nonroot:nonroot /usr/bin/httpmock-netlogger /usr/bin/httpmock-netlogger
 
-ENTRYPOINT ["go-cli-template"]
-CMD ["go-cli-template"]
+ENTRYPOINT ["httpmock-netlogger"]
+CMD ["httpmock-netlogger"]

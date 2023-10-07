@@ -38,16 +38,16 @@ changelog:
       - "^test:"
 
 # snapcrafts:
-#   - title: go-cli-template
+#   - title: httpmock-netlogger
 #     publish: true
-#     summary: "go-cli-template"
-#     description: "go-cli-template"
+#     summary: "httpmock-netlogger"
+#     description: "httpmock-netlogger"
 #     license: MIT
 
 dockers:
   - image_templates:
-      - "ghcr.io/emmanuelgautier/go-cli-template:{{ .Tag }}"
-      - "ghcr.io/emmanuelgautier/go-cli-template:v{{ .Major }}"
-      - "ghcr.io/emmanuelgautier/go-cli-template:v{{ .Major }}.{{ .Minor }}"
-      - "ghcr.io/emmanuelgautier/go-cli-template:latest"
+      - "ghcr.io/emmanuelgautier/httpmock-netlogger:{{ .Tag }}"
+      - "ghcr.io/emmanuelgautier/httpmock-netlogger:v{{ .Major }}"
+      - "ghcr.io/emmanuelgautier/httpmock-netlogger:v{{ .Major }}.{{ .Minor }}"
+      - "ghcr.io/emmanuelgautier/httpmock-netlogger:latest"
     dockerfile: .docker/Dockerfile-goreleaser

@@ -1,6 +1,6 @@
 FROM gcr.io/distroless/static-debian11:nonroot
 
-COPY --chown=nonroot:nonroot go-cli-template /usr/bin/go-cli-template
+COPY --chown=nonroot:nonroot httpmock-netlogger /usr/bin/httpmock-netlogger
 
-ENTRYPOINT ["go-cli-template"]
-CMD ["go-cli-template"]
+ENTRYPOINT ["httpmock-netlogger"]
+CMD ["httpmock-netlogger"]
