@@ -46,7 +46,7 @@ Usage:
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
-  hello       Prints a friendly greeting
+  serve       Create a HTTP Server
   help        Help about any command
 
 Flags:
@@ -55,17 +55,15 @@ Flags:
 Use "httpmock-netlogger [command] --help" for more information about a command.
 ```
 
-4. Run the `hello` subcommand:
+4. Run the `serve` subcommand:
 
 ```bash
-./httpmock-netlogger hello --name YourName
+./httpmock-netlogger serve -p 8080
 ```
-
-Replace `YourName` with your actual name. This command will print a greeting.
 
 ## License
 
-This Go CLI template is open-source and available under the MIT License. Feel free to use it as a starting point for your own CLI applications. Contributions and improvements are welcome!
+This HTTP server mock net logger is open-source and available under the MIT License. Contributions and improvements are welcome!
 
 ## Author
 

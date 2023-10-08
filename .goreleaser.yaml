@@ -37,12 +37,12 @@ changelog:
       - "^docs:"
       - "^test:"
 
-# snapcrafts:
-#   - title: httpmock-netlogger
-#     publish: true
-#     summary: "httpmock-netlogger"
-#     description: "httpmock-netlogger"
-#     license: MIT
+snapcrafts:
+  - title: httpmock-netlogger
+    publish: true
+    summary: "A simple HTTP Server mock which log every network connections events"
+    description: "A simple HTTP Server mock which log every network connections events"
+    license: MIT
 
 dockers:
   - image_templates:

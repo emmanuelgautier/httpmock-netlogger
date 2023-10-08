@@ -10,7 +10,7 @@ import (
 func NewRootCmd() (cmd *cobra.Command) {
 	var rootCmd = &cobra.Command{
 		Use:   "httpmock-netlogger",
-		Short: "HTTP Mock server with verbose net log.",
+		Short: "A simple HTTP Server mock which log every network connections events.",
 	}
 	rootCmd.AddCommand(serve.NewserveCmd())
 

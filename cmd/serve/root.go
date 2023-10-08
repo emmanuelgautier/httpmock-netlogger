@@ -12,7 +12,7 @@ var port string
 func NewserveCmd() (serveCmd *cobra.Command) {
 	serveCmd = &cobra.Command{
 		Use:   "serve",
-		Short: "Create an HTTP Server",
+		Short: "Create a HTTP Server",
 		Run: func(cmd *cobra.Command, args []string) {
 			handlerFunc := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 				log.WithFields(log.Fields{
