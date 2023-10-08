@@ -1,9 +1,9 @@
 package serve
 
 import (
-	"log"
 	"net/http"
 
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
@@ -13,7 +13,11 @@ func NewserveCmd() (serveCmd *cobra.Command) {
 		Short: "Create an HTTP Server",
 		Run: func(cmd *cobra.Command, args []string) {
 			handlerFunc := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-				log.Println(r)
+				log.WithFields(log.Fields{
+					"url":     r.URL,
+					"method":  r.Method,
+					"headers": r.Header,
+				}).Info("Incoming HTTP Request")
 
 				w.WriteHeader(http.StatusNoContent)
 			})
