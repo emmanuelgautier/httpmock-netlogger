@@ -7,6 +7,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+var port string
+
 func NewserveCmd() (serveCmd *cobra.Command) {
 	serveCmd = &cobra.Command{
 		Use:   "serve",
@@ -22,9 +24,11 @@ func NewserveCmd() (serveCmd *cobra.Command) {
 				w.WriteHeader(http.StatusNoContent)
 			})
 
-			log.Fatal(http.ListenAndServe(":8080", handlerFunc))
+			log.Fatal(http.ListenAndServe(":"+port, handlerFunc))
 		},
 	}
+
+	serveCmd.PersistentFlags().StringVarP(&port, "port", "p", "80", "HTTP server exposed port")
 
 	return serveCmd
 }
