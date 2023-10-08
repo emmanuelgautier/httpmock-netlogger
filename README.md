@@ -1,4 +1,4 @@
-# Go CLI Template
+# HTTP Mock NetLogger
 
 <p align="left">
     <a href="https://github.com/emmanuelgautier/httpmock-netlogger/actions/workflows/ci.yml"><img src="https://github.com/emmanuelgautier/httpmock-netlogger/actions/workflows/ci.yml/badge.svg?branch=main&event=push" alt="CI Tasks for Go Cli template"></a>
@@ -6,14 +6,7 @@
     <a href="https://pkg.go.dev/github.com/emmanuelgautier/httpmock-netlogger"><img src="https://pkg.go.dev/badge/www.github.com/emmanuelgautier/httpmock-netlogger" alt="PkgGoDev"></a>
 </p>
 
-This is a simple Go CLI (Command Line Interface) template that you can use as a starting point for building your own command-line applications in Go. It provides a basic structure and some common features to help you get started quickly.
-
-## Features
-
-- Command-line argument parsing using the [cobra](https://pkg.go.dev/github.com/spf13/cobra) package.
-- Simple subcommand support.
-- Github Actions workflow
-- GoReleaser preconfigured for Docker build, Github Release binaries (multi-archi) builds and snapcraft publishing.
+A simple HTTP Server mock which log every network connections events.
 
 ## Usage
 
