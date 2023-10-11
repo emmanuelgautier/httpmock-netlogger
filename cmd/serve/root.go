@@ -19,7 +19,7 @@ func NewserveCmd() (serveCmd *cobra.Command) {
 					"url":     r.URL,
 					"method":  r.Method,
 					"headers": r.Header,
-				}).Info("Incoming HTTP Request")
+				}).Infoln("Incoming HTTP Request")
 
 				w.WriteHeader(http.StatusNoContent)
 			})
