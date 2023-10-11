@@ -2,5 +2,5 @@ FROM gcr.io/distroless/static-debian11:nonroot
 
 COPY --chown=nonroot:nonroot httpmock-netlogger /usr/bin/httpmock-netlogger
 
-ENTRYPOINT ["httpmock-netlogger"]
+ENTRYPOINT ["httpmock-netlogger", "serve"]
 CMD ["httpmock-netlogger"]
