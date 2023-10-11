@@ -44,6 +44,10 @@ snapcrafts:
     description: "A simple HTTP Server mock which log every network connections events"
     license: MIT
 
+    apps:
+      httpmock-netlogger:
+        plugs: ["network-bind"]
+
 dockers:
   - image_templates:
       - "ghcr.io/emmanuelgautier/httpmock-netlogger:{{ .Tag }}"
